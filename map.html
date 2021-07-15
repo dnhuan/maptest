@@ -1,0 +1,19 @@
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+  
+  <div id="mapid"></div>
+  <script>
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=sk.eyJ1IjoiZG5odWFuIiwiYSI6ImNrcjRmNGowdzJ1d28ydm1ubHBnZWJyZGgifQ.m-P5gLZKb2YYy3Q_Do7_ag', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'sk.eyJ1IjoiZG5odWFuIiwiYSI6ImNrcjRmNGowdzJ1d28ydm1ubHBnZWJyZGgifQ.m-P5gLZKb2YYy3Q_Do7_ag'
+}).addTo(mymap);
+  </script>
+</body>
